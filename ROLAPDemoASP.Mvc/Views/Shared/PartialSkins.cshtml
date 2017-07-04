@@ -1,0 +1,16 @@
+﻿@using RadarSoft.RadarCube.Common
+@model Models.SamplesModel
+<ul class="dropdown-menu">
+@{
+    var skins = Enum.GetValues(typeof(RadarSoft.RadarCube.Web.Skins)).Cast<RadarSoft.RadarCube.Web.Skins>().ToList();
+    foreach (var skin in skins)
+    {
+        var description = RadarUtils.GetDescription(skin);
+        var value = skin.ToString();
+        var activeClass = value == Model.Skin ? "selected-item" : "";
+        <li class="@activeClass">
+            @Html.ActionLink(@description, "ChangeSkin", "OlapAnalysis", new { skin = @value }, null)
+        </li>
+    }
+}
+</ul>

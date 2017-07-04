@@ -1,0 +1,115 @@
+﻿@using Helpers
+@model Models.SamplesModel
+@{
+    Layout = "~/Views/Shared/_Layout_bootstrap.cshtml";
+}
+@{
+    const string formSubmitScript = "RadarSoft.$(this).closest('form').submit();";
+}
+<div class="row">
+    <div class="col-sm-12 col-md-12 samples-col">
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">@ViewBag.Title</h3>
+            </div>
+            <div class="panel-body samples-container">
+                @Html.OlapSamples(Model)
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-6 col-md-6">
+@using (Html.BeginForm("GridSample", "OlapAnalysis", FormMethod.Post))
+{
+    <fieldset>
+        <legend>Grid features</legend>
+
+        <table>
+            <tr>
+                <td>
+                    <table class="samples-menu-grid">
+                        <tr>
+                            <td>
+                                @Html.CheckBoxFor(m => m.ForeColorChecked, new {onClick = @formSubmitScript})
+                                <label for="ForeColorChecked">Colors cell's foreground depending on hierarchy’s members.</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                @Html.CheckBoxFor(m => m.BackColorChecked, new {onClick = @formSubmitScript})
+                                <label for="BackColorChecked">Colors cell's background depending on measure values.</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                @Html.CheckBoxFor(m => m.ImagesChecked, new {onClick = @formSubmitScript})
+                                <label for="ImagesChecked">Embed images within cells.</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                @Html.CheckBoxFor(m => m.PaintChecked, new {onClick = @formSubmitScript})
+                                <label for="PaintChecked">Painting within cells.</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                @Html.CheckBoxFor(m => m.ControlsChecked, new {onClick = @formSubmitScript})
+                                <label for="ControlsChecked">Embeds buttons that trigger the context menu for the cells.</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                @Html.CheckBoxFor(m => m.ThresholdChecked, new {onClick = @formSubmitScript})
+                                <label for="ThresholdChecked">Mark all the cells which values are below</label>
+                                @Html.TextBoxFor(m => m.ThresholdValue, new {style = "text-align: right; width: 55px"})
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+}
+    </div>
+    <div class="col-sm-6 col-md-6">
+        <fieldset class="chart-menu">
+            <legend>Chart features</legend>
+            <table class="samples-menu-chart">
+                <tr>
+                    <td>
+                        @Html.ActionLink("Mounthly sales", "SimpleSales", "OlapAnalysis")
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.ActionLink("Cross Sales Count vs Warehouse Sales", "QuantitySales", "OlapAnalysis")
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.ActionLink("Sales Count by cities", "SalesByCategories", "OlapAnalysis")
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.ActionLink("Sales Count vs Sales Count Net", "Compare", "OlapAnalysis")
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.ActionLink("Shapes", "Shapes", "OlapAnalysis")
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.ActionLink("Density of distrubution", "Density", "OlapAnalysis")
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </div>
+</div>
+

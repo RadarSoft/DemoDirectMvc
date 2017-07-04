@@ -1,0 +1,159 @@
+﻿@model Models.SamplesModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="http://radar-soft.com/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="http://radar-soft.com/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://radar-soft.com/favicon-16x16.png" sizes="16x16">
+    <link rel="mask-icon" href="http://radar-soft.com/safari-pinned-tab.svg" color="#5584b1">
+    <link href="~/Content/css/style.css" rel="stylesheet" />
+    <link href="~/Content/css/samples.css" rel="stylesheet" />
+
+    <script src="~/Content/js/jquery.min.js"></script>
+    <script src="~/Content/js/tether.min.js"></script>
+    <script src="~/Content/js/bootstrap.min.js"></script>
+
+    <link href="~/Content/rsolap/css/@(Model.Skin).RadarSoft.RadarCube.jquery-ui.css" rel="stylesheet" />
+    <!-- RadarCube debug -->
+    @*<link href="~/Content/rsolap/css/RadarSoft.RadarCube.jquery-ui.css" rel="stylesheet" />
+        <link href="~/Content/rsolap/css/RadarSoft.RadarCube.jquery.treeview.css" rel="stylesheet" />
+        <link href="~/Content/rsolap/css/jquery.treegrid.css" rel="stylesheet" />
+        <link href="~/Content/rsolap/css/spectrum.css" rel="stylesheet" />
+        <link href="~/Content/rsolap/css/jqPropertyGrid.css" rel="stylesheet" />
+
+        <script src="~/Content/rsolap/RadarSoft.RadarCube.jquery.js"></script>
+        <script src="~/Content/rsolap/RadarSoft.RadarCube.jquery-ui.js"></script>
+        <script src="~/Content/rsolap/spectrum.js"></script>
+        <script src="~/Content/rsolap/jqPropertyGrid.js"></script>
+        <script src="~/Content/rsolap/jquery.treegrid.js"></script>
+        <script src="~/Content/rsolap/RadarSoft.RadarCube.jquery.treeview.js"></script>
+        <script src="~/Content/rsolap/rsMvcOlapAnalysis.js"></script>*@
+    <!-- RadarCube debug end-->
+    <!-- RadarCube production -->
+    <link href="~/Content/rsolap/css/rsMvcOlapAnalysis.all.min.css" rel="stylesheet" />
+    <script src="~/Content/rsolap/rsMvcOlapAnalysis.all.min.js"></script>
+    <!-- RadarCube production end-->
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="navbar navbar-inverse">
+            <div class="navbar-header">
+                <a href="http://radar-soft.com/" class="navbar-brand">
+                    <img src="~/Content/images/logo.png" />
+                </a>
+                <!--<h3>RadarCube HTML for ASP.NET Web Forms</h3>-->
+                <!--<img src="RadarCube_Demo/logo.png">-->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false">Themes<span class="caret"></span></a>
+                        @Html.Partial("PartialSkins")
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" style="padding: 20px" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false">Online Demos<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="http://aspnet-mvc.demos.radar-soft.com/">RadarCube for ASP.NET MVC</a>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li>
+                                <a href="http://aspnet-webforms.demos.radar-soft.com/">RadarCube for ASP.NET Web Forms</a>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li>
+                                <a href="http://silverlight.demos.radar-soft.com/">RadarCube for Silverlight</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="jumbotron bg-product">
+                <div><h3 id="product-name">@Model.Legend</h3></div>
+            </div>
+        </div>
+        <div class="container" style="margin:0 15px 0 15px">
+            @RenderBody()
+        </div>
+        <div class="push"></div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="footer-logo" style="height:50px;">
+                        <a href="https://www.radar-soft.com/"><img src="~/Content/images/brand.png"></a>
+                    </div>
+                    <div style="margin-bottom:15px; margin-top:15px;">
+                        <p style="color:#6096be">Follow us</p>
+                        <a title="Facebook" href="https://www.facebook.com/rstrend/" target="_blank">
+                            <img style="width:26px; height:26px; margin-right:10px;" src="~/Content/images/facebook.svg">
+                        </a>
+                        <a title="Vkontakte" href="https://vk.com/radarsoft" target="_blank">
+                            <img style="width:26px; height:26px; margin-right:10px;" src="~/Content/images/vk.svg">
+                        </a>
+                        <a title="Twitter" href="https://twitter.com/RadarCube" target="_blank">
+                            <img style="width:26px; height:26px; margin-right:10px;" src="~/Content/images/twitter.svg">
+                        </a>
+                        <a title="YouTube" href="https://www.youtube.com/channel/UCc6pBVYo7Sy7Gm5y1RfciqQ" target="_blank">
+                            <img style="width:26px; height:26px; margin-right:10px;" src="~/Content/images/youtube.svg">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <dl class="footer-nav">
+                        <dt class="nav-title">RESOURCES</dt>
+                        <dd class="nav-item"><a href="https://www.radar-soft.com/news">News</a></dd>
+                        <dd class="nav-item"><a href="https://www.radar-soft.com/partnership">Partnership</a></dd>
+                        <dd class="nav-item"><a href="https://www.radar-soft.com/discounts">Discounts and Promotions</a></dd>
+                        <dd class="nav-item"><a href="http://support.radar-soft.net/" target="_blank">Helpdesk</a></dd>
+                        <dd class="nav-item"><a href="http://support.radar-soft.net/index.php?/Knowledgebase/List" target="_blank">Knowledgebase</a></dd>
+                        <dd class="nav-item"><a href="http://support.radar-soft.net/index.php?/Tickets/Submit" target="_blank">Submit support tickets</a></dd>
+                    </dl>
+                </div>
+                <div class="col-md-3">
+                    <dl class="footer-nav" id="product-list">
+                        <dt class="nav-title">PRODUCTS</dt>
+                        <dd class="nav-item"><a href="https://www.radar-soft.com/products/radarcube-asp-net-web-forms">RadarCube for ASP.NET Web Forms</a></dd>
+                        <dd class="nav-item"><a href="https://www.radar-soft.com/products/radarcube-asp-net-mvc">RadarCube for ASP.NET MVC</a></dd>
+                        <dd class="nav-item"><a href="https://www.radar-soft.com/products/radarcube-windows-forms">RadarCube for Windows Forms</a></dd>
+                        <dd class="nav-item"><a href="https://www.radar-soft.com/products/radarcube-wpf">RadarCube for WPF</a></dd>
+                        <dd class="nav-item"><a href="https://www.radar-soft.com/products/hiercube-vcl">HierCube for VCL</a></dd>
+                        <dd class="nav-item"><a href="https://www.radar-soft.com/products/radarcube-vcl">RadarCube for VCL</a></dd>
+                    </dl>
+                </div>
+                <div class="col-md-3">
+
+                    <dl class="footer-nav">
+                        <dt class="nav-title">CONTACTS</dt>
+                        <dd class="nav-item"><a href="https://www.radar-soft.com/about">About Radar-Soft</a></dd>
+                        <dd class="nav-item"><strong>Support:</strong> <a href="mailto:info@radar-soft.com" target="_blank">info@radar-soft.com</a></dd>
+                        <dd class="nav-item"><strong>Sales:</strong> <a href="mailto:sales@radar-soft.com" target="_blank">sales@radar-soft.com</a></dd>
+                        <dd class="nav-item">USA +1 206 965 8071</dd>
+                        <dd class="nav-item">UK  +44 0121 288 2140</dd>
+                    </dl>
+                </div>
+
+            </div>
+            <div class="footer-copyright text-center">© 2005-2017 Radar-Soft, L.L.C. All rights reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

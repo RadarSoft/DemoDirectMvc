@@ -1,0 +1,119 @@
+﻿body 
+{
+	font-family: Tahoma;
+	font-size: 12px;
+	color: #000066;
+	margin: 0px;
+}
+
+.internal_td
+{
+	border: solid 1px #000066 
+}
+
+
+legend
+{
+	font-weight:bold;
+	color: #1e88e0;
+	font-size: 12px;	
+}
+
+fieldset {
+    background-color: transparent;
+}
+
+h2
+{
+	color: #1e88e0;
+	font-family: Tahoma;
+	font-size: 14px;
+	font-weight:bold;
+	margin: 20px 0px 10px 10px;
+}
+
+.txt
+{
+	text-indent: 10px;
+	text-align: justify
+}	
+
+.tbl
+{
+	border-collapse:collapse;
+	border: solid 1px #058BC0;
+}
+
+.tdtbl
+{
+	border: solid 1px #058BC0;
+	border-collapse: collapse;
+}
+.buttons {
+	BACKGROUND-COLOR: #9ab1e3;
+	COLOR: white;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 12px;
+	FONT-WEIGHT: bold;
+	border-right : 1px solid #004C69;
+	border-left : 1px solid #88C3DA;
+	border-bottom : 1px solid #004C69;
+	border-top : 1px solid #88C3DA;
+	padding : 1px 1px 1px 1px;
+	text-align : center;
+}
+
+a.menu2:link { color: #606060; text-decoration: none; font-weight: bold }
+a.menu2:visited { color: #606060; text-decoration: none; font-weight: bold }
+a.menu2:hover { color: #F5821F; text-decoration: none; font-weight: bold }
+
+.topmenu_active
+{
+    font: Verdana 12px;
+    color: #036;
+    background: url('/Content/images/bg_activ_menu.png');
+    padding: 0px 15px;
+}
+
+.topmenu
+{
+    font: Verdana 12pt;
+    color: #fff;
+    padding: 0px 15px;
+}
+
+.bottommenu {
+    color: #FFFFFF;
+    margin: -30px 0;
+    text-align: center;
+}
+
+.topmenu a, .bottommenu a
+{
+    color: #fff;
+    text-decoration: none;
+}
+
+.topmenu_active a
+{
+    color: #036;
+    text-decoration: none;
+}
+
+.topmenu a:hover
+{
+    color: #c3ebfa;
+    text-decoration: none;
+}
+
+.chart-menu a {
+    line-height: 20px;
+    color: #000066;
+}
+.chart-menu a:hover{
+    color: #000066;
+    text-decoration: none;
+}
+.chart-menu a:visited {
+    color: #000066;
+}
