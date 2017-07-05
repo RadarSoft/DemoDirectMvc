@@ -1,4 +1,4 @@
-# SiteDemoDirectMvc
+# DemoDirectMvc
 
 There is an application that is included in a distribution of RadarCube for ASP.NET MVC.
 

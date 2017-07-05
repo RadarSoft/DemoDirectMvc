@@ -1,2 +1,1 @@
-DemoDirectMvcBackend/Controllers/* linguist-vendored
-*.cs diff=csharp
+DemoDirectMvcBackend/ROLAPDemoASP.Mvc/Content/* linguist-vendored
