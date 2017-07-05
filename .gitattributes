@@ -1,1 +1,2 @@
-ROLAPDemoASP.Mvc/Code/* linguist-vendored
+* linguist-vendored
+*.cs linguist-vendored=false
