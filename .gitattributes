@@ -1,2 +1,2 @@
-/DemoDirectMvcBackend/Controllers/* linguist-vendored
+DemoDirectMvcBackend/Controllers/* linguist-vendored
 *.cs diff=csharp
