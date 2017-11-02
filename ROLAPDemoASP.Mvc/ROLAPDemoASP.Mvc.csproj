@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -46,17 +47,17 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DocumentFormat.OpenXml, Version=2.0.5022.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\RadarSoft.RadarCube.Web.Mvc.2.1.0\lib\net45\DocumentFormat.OpenXml.dll</HintPath>
+      <HintPath>..\packages\RadarSoft.RadarCube.Web.Mvc.2.1.1\lib\net45\DocumentFormat.OpenXml.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="RadarSoft.RadarCube.Web.Direct.Mvc, Version=2.1.0.0, Culture=neutral, PublicKeyToken=674cf0e5bf72fa08, processorArchitecture=MSIL">
-      <HintPath>..\packages\RadarSoft.RadarCube.Web.Direct.Mvc.2.1.0\lib\net45\RadarSoft.RadarCube.Web.Direct.Mvc.dll</HintPath>
+    <Reference Include="RadarSoft.RadarCube.Web.Direct.Mvc, Version=2.1.1.0, Culture=neutral, PublicKeyToken=674cf0e5bf72fa08, processorArchitecture=MSIL">
+      <HintPath>..\packages\RadarSoft.RadarCube.Web.Direct.Mvc.2.1.1\lib\net45\RadarSoft.RadarCube.Web.Direct.Mvc.dll</HintPath>
     </Reference>
-    <Reference Include="RadarSoft.RadarCube.Web.Mvc, Version=2.1.0.0, Culture=neutral, PublicKeyToken=674cf0e5bf72fa08, processorArchitecture=MSIL">
-      <HintPath>..\packages\RadarSoft.RadarCube.Web.Mvc.2.1.0\lib\net45\RadarSoft.RadarCube.Web.Mvc.dll</HintPath>
+    <Reference Include="RadarSoft.RadarCube.Web.Mvc, Version=2.1.1.0, Culture=neutral, PublicKeyToken=674cf0e5bf72fa08, processorArchitecture=MSIL">
+      <HintPath>..\packages\RadarSoft.RadarCube.Web.Mvc.2.1.1\lib\net45\RadarSoft.RadarCube.Web.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />

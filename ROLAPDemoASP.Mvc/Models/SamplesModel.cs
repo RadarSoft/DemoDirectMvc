@@ -241,14 +241,14 @@ namespace Models
 
         public virtual object DoCallback()
         {
-            var directSampleCreator = SamplesCreators[Samples.None];
+            var directSampleCreator = SamplesCreators[Samples.GridSample];
             var directSample = directSampleCreator.CreateSample(this);
             return directSample.OlapAnalysis.DoCallback();
         }
 
         public virtual BinaryStreamResult DoExport()
         {
-            var directSampleCreator = SamplesCreators[Samples.None];
+            var directSampleCreator = SamplesCreators[Samples.GridSample];
             var directSample = directSampleCreator.CreateSample(this);
             return directSample.OlapAnalysis.DoExport();
         }

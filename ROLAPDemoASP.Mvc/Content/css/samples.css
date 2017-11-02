@@ -48,3 +48,10 @@ table.samples-menu-chart td {
     margin-top: 5px;
 }
 
+.ui-menu .ui-menu-item {
+    list-style-image: none !important;
+}
+
+#olapgrid_rsPopup {
+    z-index: 10;
+}

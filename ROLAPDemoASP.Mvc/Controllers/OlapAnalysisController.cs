@@ -19,12 +19,6 @@ namespace Controllers
             return View(SampleModel);
         }
 
-        public ViewResult PostbackHandler()
-        {
-            SampleModel = new RSamplesModel { Sample = Samples.None };
-            return View("Index", SampleModel);
-        }
-
         [AjaxOnly]
         [AcceptVerbs(HttpVerbs.Post)]
         public JsonResult CallbackHandler()
